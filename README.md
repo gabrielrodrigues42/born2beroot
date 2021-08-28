@@ -25,9 +25,9 @@ Here are some important topics you should search for the project, basically unde
 - Choose amount of storage
 - Choose Bridge Adapter mode in Network Settings
 - Install ISO from chosen system, without graphical interface
-- Setup hostname (login42)
+- Setup hostname `login42`
 - Setup root password following PDF's policy
-- Setup user (login)
+- Setup user `login`
 - Setup user password following PDF's policy
 - Setup the partitions using encrypted LVM accordingly to mandatory or bonus
 - Install only SSH server and standard system utilities
@@ -41,9 +41,9 @@ Here are some important topics you should search for the project, basically unde
 - Add your user to Sudo
 - Edit `/etc/sudoers.d/(FILE)` \
 	Defaults	passwd_tries=3 \
-	Defaults	badpass_message="(CUSTOM MESSAGE)" \
+	Defaults	badpass_message="`(CUSTOM MESSAGE)`" \
 	Defaults	iolog_dir="/var/log/sudo" \
-	Defaults	logfile="/var/log/sudo/(FILE)" \
+	Defaults	logfile="/var/log/sudo/`(FILE)`" \
 	Defaults	log_input,log_output \
 	Defaults	requiretty \
 	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" \
