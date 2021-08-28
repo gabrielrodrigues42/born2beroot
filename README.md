@@ -38,8 +38,12 @@ Here are some important topics you should search for the project, basically unde
 ### Sudo
 
 - Install Sudo
-- Add your user to Sudo
+- Add your user to `sudo`
+- Create `user42` group
+- Add your user to `user42` group
+
 - Edit `/etc/sudoers.d/<file>` \
+
 		Defaults	passwd_tries=3 \
 		Defaults	badpass_message="`<custom-message>`" \
 		Defaults	iolog_dir="/var/log/sudo" \
@@ -51,6 +55,7 @@ Here are some important topics you should search for the project, basically unde
 ### SSH
 
 - Edit `/etc/ssh/sshd_config` \
+
 		#Port 22 \
 		Port 4242 \
 		#PermitRootLogin prohibit-password \
@@ -65,10 +70,12 @@ Here are some important topics you should search for the project, basically unde
 ### Network
 
 - Edit `/etc/network/interfaces` \
+
 		iface enp0s3 inet dhcp \
 		iface enp0s3 inet static
 
 - Edit `/etc/network/interfaces.d/<file>` \
+
 		iface enp0s3 inet static \
 		address `<vm-ip>` \
 		netmask `<vm-netmask>` \
@@ -79,9 +86,11 @@ Here are some important topics you should search for the project, basically unde
 - Install libpam
 
 - Edit `/etc/pam.d/common-password` \
+
 	password	requisite	pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 
 - Edit `/etc/login.defs` \
+
 		ENV_SUBPATH add /snap/bin \
 		PASS_MAX_DAYS 30 \
 		PASS_MIN_DAYS 2 \
@@ -92,8 +101,12 @@ Here are some important topics you should search for the project, basically unde
 ### Cron
 
 - Create `monitoring.sh` in root
+
 - Edit `crontab -e` \
+
 		`*/10 * * * * /bin/sleep $(last --time-format iso reboot | head -1 | awk -F ":" '{printf ("\%d", $2\%10*60+$3)}') && /root/monitoring.sh`
+
+- OBS: My monitoring.sh needs `net-tools` and `sysstat` packages
 
 ### Remote Conection
 
