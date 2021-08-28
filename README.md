@@ -39,7 +39,7 @@ Here are some important topics you should search for the project, basically unde
 
 - Install Sudo
 - Add your user to Sudo
-- Edit /etc/sudoers.d/(FILE)
+- Edit `/etc/sudoers.d/(FILE)` \
 	Defaults	passwd_tries=3 \
 	Defaults	badpass_message="(CUSTOM MESSAGE)" \
 	Defaults	iolog_dir="/var/log/sudo" \
