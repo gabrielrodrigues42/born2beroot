@@ -104,7 +104,7 @@ Here are some important topics you should search for the project, basically unde
 
 - Edit `crontab -e`
 
-		`*/10 * * * * /bin/sleep $(last --time-format iso reboot | head -1 | awk -F ":" '{printf ("\%d", $2\%10*60+$3)}') && /root/monitoring.sh`
+		*/10 * * * * /bin/sleep $(last --time-format iso reboot | head -1 | awk -F ":" '{printf ("\%d", $2\%10*60+$3)}') && /root/monitoring.sh
 
 - OBS: My monitoring.sh needs `net-tools` and `sysstat` packages
 
