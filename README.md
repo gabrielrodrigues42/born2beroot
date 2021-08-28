@@ -87,7 +87,7 @@ Here are some important topics you should search for the project, basically unde
 
 - Edit `/etc/pam.d/common-password`
 
-	password	requisite	pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+		password	requisite	pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
 
 - Edit `/etc/login.defs`
 
