@@ -35,7 +35,18 @@ Here are some important topics you should search for the project, basically unde
 
 ## Rules Setup
 
+### Sudo
 
+- Install Sudo
+- Add your user to Sudo
+- Edit /etc/sudoers.d/(FILE)
+	Defaults	passwd_tries=3 \
+	Defaults	badpass_message="(CUSTOM MESSAGE)" \
+	Defaults	iolog_dir="/var/log/sudo" \
+	Defaults	logfile="/var/log/sudo/(FILE)" \
+	Defaults	log_input,log_output \
+	Defaults	requiretty \
+	Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin" \
 
 ## References
 
