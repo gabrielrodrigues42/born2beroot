@@ -1,6 +1,6 @@
 # Born2beRoot
 
-This project focus on understanding how a Virtual Machine works, setting up an ssh server using Debian or CentOS, following strict rules.
+This project focus on understanding how a Virtual Machine works, setting up an SSH server using Debian or CentOS, following strict rules.
 
 ## Subjects
 
@@ -19,7 +19,7 @@ Here are some important topics you should search for the project, basically unde
 
 ## VM Setup
 
-- Create a VM with your chosen distro, in VirtualBox
+- Create a VM with your chosen distro, in VirtualBox or UTM
 - Choose amount of RAM
 - Create a virtual hard disk, VDI, dynamically allocated
 - Choose amount of storage
@@ -111,3 +111,29 @@ Here are some important topics you should search for the project, basically unde
 ### Remote Conection
 
 - In your host machine: `ssh <user>@<vm-ip> -p 4242`
+
+### Useful Commands
+
+		groupadd <new group> (create group)
+		groupdel <group> (delete group)
+		useradd <username> (create user)
+		userdel <username> (delete user)
+		passwd <username> (create password)
+		adduser <username> <group> (add user to group)
+		deluser <username> <group> (remove user from a group)
+		groups <username> (get groups that user are in)
+		hostnamectl set-hostname <new hostname>
+		service ssh status
+		ufw enable
+		ufw allow <port>
+		ufw status
+		ufw status numbered
+		ufw delete <number>
+		chage -M 30 <username>
+		chage -m 2 <username>
+		chage -W 7 <username>
+		chage -l <username>
+		crontab -l
+		lsblk
+		ss -tunlp
+		ifconfig
