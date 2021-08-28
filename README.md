@@ -38,7 +38,7 @@ Here are some important topics you should search for the project, basically unde
 ### Sudo
 
 - Install Sudo
-- Add your user to `sudo`
+- Add your user to `sudo` group
 - Create `user42` group
 - Add your user to `user42` group
 
