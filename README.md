@@ -45,9 +45,9 @@ Here are some important topics you should search for the project, basically unde
 - Edit `/etc/sudoers.d/<file>`
 
 		Defaults	passwd_tries=3
-		Defaults	badpass_message="`<custom-message>`"
+		Defaults	badpass_message="<custom-message>"
 		Defaults	iolog_dir="/var/log/sudo"
-		Defaults	logfile="/var/log/sudo/`<file>`"
+		Defaults	logfile="/var/log/sudo/<file>"
 		Defaults	log_input,log_output
 		Defaults	requiretty
 		Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
@@ -77,9 +77,9 @@ Here are some important topics you should search for the project, basically unde
 - Edit `/etc/network/interfaces.d/<file>`
 
 		iface enp0s3 inet static
-		address `<vm-ip>`
-		netmask `<vm-netmask>`
-		gateway `<vm-gateway>`
+		address <vm-ip>
+		netmask <vm-netmask>
+		gateway <vm-gateway>
 
 ### Password Policy
 
